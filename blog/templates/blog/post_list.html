@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,16 +9,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
     <title>Django Tutorial</title>
   </head>
   <body>
-    <header>
+    <header class="page-header">
       <h1><a href="/">Django Girls Blog</a></h1>
     </header>
     {% for post in posts %}
     <article>
       <h2><a href="">{{ post.title}}</a></h2>
-      <time>published: {{ post.published_date}} </time>
+      <time><strong>published:</strong> {{ post.published_date}} </time>
       <p>{{ post.text }}</p>
       <p>
         Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
