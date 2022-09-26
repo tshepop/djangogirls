@@ -8,13 +8,19 @@ body {
     padding: 20px 20px 20px 40px;
 }
 
-.page-header h1, .page-header a, .page-header h1 a:visited, .page-header h1 a:active {
+.page-header h1,
+.page-header a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
     color: #fff;
     font-size: 36pt;
     text-decoration: none;
 }
 
-h1 a, h2 a {
+h1,
+h2,
+h3,
+h4 {
     color: #d6e6e6;
     font-family: 'Lobster', cursive;
 }
@@ -31,11 +37,14 @@ h1 a, h2 a {
     float: right;
 }
 
-.post-form textarea, .post-form input {
+.post-form textarea,
+.post-form input {
     width: 100%;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
     color: #fff;
     float: right;
     font-size: 26pt;
@@ -46,6 +55,25 @@ h1 a, h2 a {
     margin-bottom: 70px;
 }
 
-.post h1 a, .post h1 a:visited {
+.post h2 a,
+.post h2 a:visited {
     color: #000;
 }
+
+.post > .date,
+.post > .actions {
+    float: right;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+    color: #c25100;
+    background: none;
+    border-color: #c25100;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #c25100;
+}
+

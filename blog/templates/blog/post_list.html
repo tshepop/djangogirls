@@ -22,20 +22,29 @@
     <header class="page-header">
       <h1><a href="/">Django Girls Blog</a></h1>
     </header>
-    {% for post in posts %}
-    <article>
-      <h2><a href="">{{ post.title}}</a></h2>
-      <time><strong>published:</strong> {{ post.published_date}} </time>
-      <p>{{ post.text }}</p>
-      <p>
-        Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum dolor
-        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Lorem Ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua.
-      </p>
-    </article>
-    {% endfor %}
+
+    <main class="content container">
+      <div class="row">
+        <div class="col">
+          {% for post in posts %}
+          <article class="post">
+            <time class="date">
+              <p>published: {{post.published_date}}</p>
+            </time>
+            <h2><a href="">{{post.title}}</a></h2>
+            <p>{{post.text}}</p>
+            <p>
+              Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
   </body>
 </html>
