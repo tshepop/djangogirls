@@ -3,7 +3,9 @@
   <time class="date">
     <p>published: {{post.published_date}}</p>
   </time>
-  <h2><a href="">{{post.title}}</a></h2>
+  <h2>
+    <a href="{% url 'blog/post_detail' pk=post.pk %}">{{post.title}}</a>
+  </h2>
   <p>{{post.text}}</p>
   <p>
     Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
